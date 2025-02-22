@@ -1,20 +1,13 @@
-.page-footer {
-  --footer-padding: 4rem;
+// composition_related_styles/_footer.scss
+.footer {
   position: relative;
-  padding: var(--footer-padding) 1rem;
   background-color: var(--color-primary);
   color: var(--color-light);
-  margin-top: 4rem;
-
-  .container {
-    display: grid;
-    gap: 2rem;
-    max-width: 80ch;
-    margin: 0 auto;
-  }
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-xl);
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -23,46 +16,36 @@
     background-color: var(--color-secondary);
   }
 
-  ul {
+  .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-    padding: 0;
-    list-style: none;
+    gap: var(--spacing-lg);
+  }
 
+  &__grid {
+    display: grid;
+    gap: var(--spacing-md);
+    
     @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   }
 
-  li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--spacing-sm);
   }
 
-  a {
+  &__link {
     color: var(--color-light);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color 0.2s ease;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--color-background);
-    }
-  }
-
-  .link-github,
-  .link-rss,
-  .link-support {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    
-    svg {
-      width: 1.2em;
-      height: 1.2em;
-      fill: currentColor;
     }
   }
 }
