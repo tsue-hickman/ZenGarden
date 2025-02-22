@@ -5,7 +5,7 @@
   --color-primary-alt: #75908B;
   --color-secondary: #E5EDE8;
   --color-background: #B1CDBD;
-  --color-text: #213535;
+  --color-text: rgb(33.075, 53.025, 52.675);
   --color-light: #fff;
   --color-anchor: #215A59;
   --font-family: "Raleway", sans-serif;
@@ -513,7 +513,7 @@ nav ul li {
 }
 @media (min-width: 515px) and (max-width: 765px) {
   #styles .features li:nth-last-child(1):nth-child(odd),
-.features.patterned li:nth-last-child(1):nth-child(odd) {
+  .features.patterned li:nth-last-child(1):nth-child(odd) {
     grid-column: span 2;
   }
 }
@@ -745,3 +745,5 @@ nav ul li {
   margin-right: 0.25em;
   fill: currentColor;
 }
+
+/*# sourceMappingURL=style.css.map */
